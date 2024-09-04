@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+p.a {
+    margin-top: 5em
+}
+
+.Equipment {
+    font-size: 70px;
+}
+.titleP {
+    font-size: 25px;
+    color: #295F98;
+}
+.i9 {
+    font-size: 20px;
+}
+.i7 {
+    font-size: 20px;
+}
+.inlisttitle {
+    font-size: 15px;
+} 
+.Equipmentname {
+    font-size: 50px;
+    color: #A1D6B2;
+
+}
