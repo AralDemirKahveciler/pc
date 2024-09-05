@@ -1,0 +1,355 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font: normal 28px Raleway, Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background: aliceblue;
+  width: 100%;
+}
+
+.jumbotron {
+  padding-top: 0;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background: #f0f8ff;
+}
+
+.hero {
+  background-image: url('https://rimaone.com/wp-content/uploads/2015/12/Header-rimaone.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 0;
+  min-height: 320px;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 2em;
+}
+
+h3 {
+  color: white;
+  font-size: 1em;
+}
+
+/* Header Styles */
+.header-fixed {
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px #ccc;
+  padding: 20px 40px;
+  height: 80px;
+  color: #000000;
+  box-sizing: border-box;
+  top: -100px;
+  transition: top 0.3s;
+}
+
+.header-fixed .header-limiter {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header-fixed .header-limiter h1 {
+  float: left;
+  font: normal 28px Raleway, Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+  color: #5383d3;
+}
+
+.header-fixed .header-limiter nav {
+  font: 16px "Raleway", Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  float: right;
+}
+
+.header-fixed .header-limiter nav a {
+  display: inline-block;
+  padding: 0 5px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover {
+  opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+  color: #608bd2;
+  pointer-events: none;
+  opacity: 1;
+}
+
+body.fixed .header-fixed {
+  padding: 10px 40px;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #ffffff;
+}
+
+body.fixed .header-fixed-placeholder {
+  display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+  line-height: 28px;
+  font-size: 13px;
+}
+
+@media all and (max-width: 600px) {
+  .header-fixed {
+    padding: 20px 0;
+    height: 75px;
+  }
+  .header-fixed .header-limiter h1 {
+    float: none;
+    margin: -8px 0 10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .header-fixed .header-limiter nav {
+    line-height: 1;
+    float: none;
+  }
+  .header-fixed .header-limiter nav a {
+    font-size: 13px;
+  }
+  body.fixed .header-fixed {
+    display: none;
+  }
+}
+
+/* Sidenav Styles */
+.navside {
+  font-size: 30px;
+  right: 6px;
+  bottom: 6px;
+  color: black;
+  background: #ccc;
+  padding: 8px 16px;
+  border-radius: 10px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px !important;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Content Styles */
+main {
+  min-height: 500px;
+  background: aliceblue;
+  padding: 50px 0;
+}
+
+.contained {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bg-clip {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  padding: 1em .75em;
+  font-size: 56px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  color: #fff;
+  background-image: url('https://rimaone.com/wp-content/uploads/2015/12/Header-rimaone.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #4c458b;
+}
+
+.bg-clip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -2;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-clip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.25) 100%);
+  transition: opacity .5s ease-in-out;
+}
+
+.bg-clip:hover {
+  cursor: pointer;
+}
+
+.bg-clip span {
+  position: absolute;
+  bottom: 1rem;
+  display: block;
+  margin-top: 1rem;
+  padding-top: .5rem;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: none;
+  -webkit-text-fill-color: #000;
+  border-top: 3px solid rgba(43, 39, 39, 0.8);
+  transition: opacity .5s ease-in-out;
+}
+
+.bg-clip:hover::after, .bg-clip:hover span {
+  opacity: 0;
+}
+
+/* Footer Styles */
+footer {
+  position: relative;
+  background-color: #4c458b;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 11px;
+}
+
+footer .inner {
+  display: flex;
+}
+
+footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+footer .meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+}
+
+footer .meta ul {
+  list-style-type: none;
+  color: #fff;
+}
+
+footer .meta .links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  font-size: 1.8em;
+  width: 70%;
+  font-weight: bold;
+}
+
+footer .meta .icons {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'FontAwesome';
+  width: 20%;
+}
+
+@media screen and (max-width: 645px) {
+  footer .copyright {
+    align-items: flex-end;
+  }
+  footer .meta {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  footer .meta .links {
+    order: 2;
+    width: 80%;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+  }
+ 
